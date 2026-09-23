@@ -292,3 +292,5 @@ bun run dev
 ## 🏝️ 社区交流
 - Telegram 群组：https://t.me/edgeKeyChannel
 - Telegram 频道：https://t.me/edgeKeyGroup
+
+# Deployed via Cloudflare Git Integration - edge-key2
