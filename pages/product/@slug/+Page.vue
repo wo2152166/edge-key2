@@ -196,6 +196,7 @@ import type { Data } from "./+data";
 import emptyCoverUrl from "../../../assets/empty.jpg";
 
 const { product, paymentMethods } = useData<Data>();
+let mobile = false;
 const submitting = ref(false);
 const errorMessage = ref("");
 const descriptionRef = ref<HTMLElement | null>(null);
@@ -229,8 +230,6 @@ const form = reactive({
 function getDeliveryTypeLabel(type: string) {
   return ({ CARD_AUTO: "自动发货", FIXED_CARD: "自动发货", MANUAL: "人工发货", EXPRESS: "快递发货" } as Record<string, string>)[type] || type;
 }
-
-let mobile = false;
 
 function getDefaultPaymentChannel(provider: PaymentProvider | "") {
   if (provider === "EPAY") return epayChannels.value[0]?.value ?? "";
